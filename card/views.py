@@ -14,7 +14,7 @@ class CardViewSet(viewsets.ViewSet):
         file_obj = request.FILES.get("file")
         if not file_obj:
             return Response({"error": "File not provided"}, status=status.HTTP_400_BAD_REQUEST)
-
+ 
         try:
             import pandas as pd
             if file_obj.name.endswith(".csv"):
